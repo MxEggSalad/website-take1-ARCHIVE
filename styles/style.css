@@ -1,0 +1,11 @@
+html {
+    text-align: center;
+    font-family:"Courier";
+    font-size: larger;
+}
+
+ul.myUL {
+    display: inline-block;
+    text-align: left;
+}
+
