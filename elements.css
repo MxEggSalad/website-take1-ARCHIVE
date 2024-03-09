@@ -3,7 +3,7 @@
 /* Must start with ".site-box". Change how your website will appear on main nekoweb site: https://lune.dimden.dev/405a44b7e5.png */
 .site-box {
     text-align: center;
-    background-image: url(https://mxeggsalad.nekoweb.org/fucked-up-cat-sitebox.png); /* Only nekoweb URLs allowed, use full url to your site like https://example.nekoweb.org/images/coolbg.png */
+    background-image: url(https://mxeggsalad.nekoweb.org/main-assets/fucked-up-cat-sitebox.png); /* Only nekoweb URLs allowed, use full url to your site like https://example.nekoweb.org/images/coolbg.png */
     background-repeat: no-repeat;
     
 }
