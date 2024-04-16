@@ -2,6 +2,22 @@ html {
     text-align: center;
     font-family:"Courier";
     font-size: larger;
+    background-color:#1b1b1b;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul{
+    color: #d2d2d2;
+}
+
+a{
+    color: #0252a1;
 }
 
 ul.myUL {
