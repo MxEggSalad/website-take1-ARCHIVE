@@ -3,6 +3,9 @@ html {
     font-family:"Courier New";
     font-size: x-large;
 }
+iframe { 
+    border: none; 
+}
 
 body{
     background-color:#1b1b1b;
