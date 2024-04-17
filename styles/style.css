@@ -16,10 +16,10 @@ p,h1,h2,h3,h4,h5,h6,ul{
 }
 
 a:link{
-    color: #0252a1;
+    color: #0e5dad;
 }
 a:visited{
-    color: #0289a1;
+    color: #0d6283;
 }
 a:hover{
     background-color: #131212;
