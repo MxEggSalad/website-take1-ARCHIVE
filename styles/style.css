@@ -1,14 +1,15 @@
-/* Background and Text Formatting */
+/* Background */
 body{
     background-color:#1b1b1b;
-    -webkit-text-fill-color: #d2d2d2;
     text-align: center;
-    font-family:"Courier New";
-    font-size: x-large;
 }
 
-/* Fixes colours that are wrong because of body -webkit-text-fill-color */
-audio{-webkit-text-fill-color: black;}
+/* Text Formatting */
+p, a, h1, h2, h3, h4, ul, li{
+    font-family:"Courier New";
+    font-size: x-large;
+    -webkit-text-fill-color: #d2d2d2;
+}
 
 /* Links colour formatting */
 a:link{-webkit-text-fill-color: #0e5dad;}
