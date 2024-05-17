@@ -1,18 +1,23 @@
 /* Background */
 body{
-    background-color:#1b1b1b;
-    text-align: center;
+  background-color:#1b1b1b;
+  text-align: center;
+  margin-left: 160px;
+  padding: 0px 10px;
 }
 
 /* Text Formatting */
 @font-face {
-    font-family: 'homestuck-font'; 
-    src: url('/assets/Courier\ New.ttf'); 
+  font-family: 'homestuck-font'; 
+  src: url('/assets/Courier\ New.ttf'); 
 }
-p, a, h1, h2, h3, h4, ul, li{
-    font-family:"homestuck-font";
-    font-size: x-large;
-    -webkit-text-fill-color: #d2d2d2;
+p,a,h1,h2,h3,h4,ul,li{
+  font-family:"homestuck-font";
+  font-size: x-large;
+  -webkit-text-fill-color: #d2d2d2;
+}
+h1,h2,h3,h4,h5,h6{
+  font-size: xx-large;
 }
 
 /* Links colour formatting */
@@ -25,10 +30,36 @@ ul{color: #d2d2d2;}
 
 /* Makes lists look less nautious when paired with text-align: center; */
 ul.myUL {
-    display: inline-block;
-    text-align: left;
+  display: inline-block;
+  text-align: left;
 }
 
 /* Makes iframes not look ugly as fuck with that outline, 
 and makes depreciated stuff fit style spesifications*/
 iframe {border: none;}
+
+.mainNav{
+  height: 100%;
+  width: 120px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(32, 32, 32);
+  overflow-x: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-right: solid;
+  border-width: 2px;
+}
+.mainNav ul{
+  list-style-type: none;
+  padding: 0;
+  font-size: 120%;
+}
+.mainNav li{
+  margin: 15px 0px;
+}
+.mainNav img{
+  margin-top: 15px;
+}
