@@ -18,6 +18,7 @@ p,a,h1,h2,h3,h4,ul,li{
 }
 h1,h2,h3,h4,h5,h6{
   font-size: xx-large;
+  font-weight: bold;
 }
 
 /* Links colour formatting */
@@ -57,9 +58,5 @@ iframe {border: none;}
   padding: 0;
   font-size: 120%;
 }
-.mainNav li{
-  margin: 15px 0px;
-}
-.mainNav img{
-  margin-top: 15px;
-}
+.mainNav li{margin: 15px 0px;}
+.mainNav img{margin-top: 15px;}
