@@ -1,0 +1,39 @@
+/* Background */
+body{
+  background-color:#1b1b1b;
+  text-align: center;
+  padding: 0px 9%;
+}
+
+/* Text Formatting */
+@font-face {
+  font-family: 'homestuck-font'; 
+  src: url('/assets/Courier\ New.ttf'); 
+}
+p,a,h1,h2,h3,h4,ul,li{
+  font-family:"homestuck-font";
+  font-size: x-large;
+  -webkit-text-fill-color: #d2d2d2;
+}
+h1,h2,h3,h4,h5,h6{
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+/* Links colour formatting */
+a:link{-webkit-text-fill-color: #0e5dad;}
+a:visited{-webkit-text-fill-color: #108998;}
+a:hover{background-color: #131212;}
+
+/* Ul styling (i just like how it looks) */
+ul{color: #d2d2d2;}
+
+/* Makes lists look less nautious when paired with text-align: center; */
+ul.myUL {
+  display: inline-block;
+  text-align: left;
+}
+
+/* Makes iframes not look ugly as fuck with that outline, 
+and makes depreciated stuff fit style spesifications*/
+iframe {border: none;}
