@@ -23,17 +23,16 @@
     <h1>About</h1>
   </header>
 
-  <div class="mainNav">
-  <img src="/assets/crustyinfanthighrez.jpg" height="100" alt="">
-  <ul>
-    <li><a href="/homepage/" title="Main page of the website">Homepage</a></li>
-    <li><a href="/blog/" title="Long articles, usually informative or based on my interests">Blog</a></li>
-    <li><a href="/kibbles/" title="Smaller, tid bit twitter like writings">Kibbles</a></li>
-    <li><a href="/music/" title="Self explanatory">Music I Like</a></li>
-    <li><a href="/otherwebsites/" title="Also self explanatory">Other Websites I Like</a></li>
-    <li><a href="/about/" title="Outlines some information about this website and my contact information">About</a></li>
-  </ul>
-  </div>
+  <section id="mainNav"></section>
+  <script>
+    fetch("/assets/mainNav.html")
+      .then((response) => {
+        return response.text();
+      })
+      .then((data) => {
+        document.getElementById("mainNav").innerHTML = data;
+      });
+  </script>
 
   <main>
     <h2>These are the places you can reach me!!</h2>
