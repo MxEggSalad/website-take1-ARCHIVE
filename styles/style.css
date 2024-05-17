@@ -5,8 +5,12 @@ body{
 }
 
 /* Text Formatting */
+@font-face {
+    font-family: 'homestuck-font'; 
+    src: url('/assets/Courier\ New.ttf'); 
+}
 p, a, h1, h2, h3, h4, ul, li{
-    font-family:"Courier New";
+    font-family:"homestuck-font";
     font-size: x-large;
     -webkit-text-fill-color: #d2d2d2;
 }
