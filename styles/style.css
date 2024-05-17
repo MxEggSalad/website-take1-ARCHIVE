@@ -35,6 +35,11 @@ ul.myUL {
   text-align: left;
 }
 
+ul.noBullets{
+  list-style-type: none;
+  padding: 0;
+}
+
 /* Makes iframes not look ugly as fuck with that outline, 
 and makes depreciated stuff fit style spesifications*/
 iframe {border: none;}
