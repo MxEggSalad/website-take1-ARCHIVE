@@ -49,6 +49,13 @@
         a:link {color: white;}
         a:hover {color: black!important;}
         a:visited {color: white;}
+        audio.stuck{
+            position: fixed;
+            z-index: 1;
+            bottom: 0;
+            left: 0;
+            margin: 3px;
+        }
     </style>
 </head>
 <body>
@@ -60,5 +67,9 @@
         <p>Everything is WIP<br>and probably god awfully coded.</p>
         <a href="homepage/">Enter ==&gt;</a>
     </div>
+    <audio controls class="stuck" autoplay loop>
+        <source src="assets/theMollusk.mp3" type="audio/mpeg">
+        <source src="assets/theMollusk.ogg" type="audio/ogg">
+    </audio>
 </body>
 </html>
