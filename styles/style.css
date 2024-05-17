@@ -16,7 +16,7 @@ p,a,h1,h2,h3,h4,ul,li{
   font-size: x-large;
   -webkit-text-fill-color: #d2d2d2;
 }
-h1,h2,h3,h4,h5,h6{
+h1{
   font-size: xx-large;
   font-weight: bold;
 }
