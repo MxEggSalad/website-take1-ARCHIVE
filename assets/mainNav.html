@@ -1,7 +1,33 @@
 <link rel="stylesheet" href="/styles/style.css">
+<style>
+  .mainNav{
+  height: 100%;
+  width: 120px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(32, 32, 32);
+  overflow-x: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-right: solid;
+  border-width: 2px;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */}
+.mainNav ul{
+  list-style-type: none;
+  padding: 0px;
+  margin-top: 0;
+  font-size: 120%;}
+.links li{margin: 15px 0px;}
+.logo{margin-top: 15px;}
+.mainNav::-webkit-scrollbar {display: none;}
+p{margin: 0 auto;}
+</style>
 <div class="mainNav">
-  <img src="/assets/crustyinfantscreamingforhelp.jpg" height="100" alt="">
-  <ul>
+  <img class="logo" src="/assets/crustyinfantscreamingforhelp.jpg" height="100" alt="">
+  <ul class="links">
     <li><a href="/homepage/" title="Main page of the website">Homepage</a></li>
     <li><a href="/blog/" title="Long articles, usually informative or based on my interests">Blog</a></li>
     <li><a href="/kibbles/" title="Smaller, tid bit twitter like writings">Kibbles</a></li>

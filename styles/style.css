@@ -29,6 +29,7 @@ ul.noBullets{
   padding: 0;
 }
 ul{color: #d2d2d2;}
+.buttons li{padding: 8px 0px 1px;}
 
 @font-face {
   font-family: 'homestuck-font'; 
@@ -36,31 +37,3 @@ ul{color: #d2d2d2;}
 }
 
 iframe {border: none;}
-
-.mainNav{
-  height: 100%;
-  width: 120px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: rgb(32, 32, 32);
-  overflow-x: hidden;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-right: solid;
-  border-width: 2px;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-.mainNav ul{
-  list-style-type: none;
-  padding: 0;
-  font-size: 120%;
-}
-.mainNav li{margin: 15px 0px;}
-.mainNav img{margin-top: 15px;}
-
-.mainNav::-webkit-scrollbar {
-  display: none;
-}
