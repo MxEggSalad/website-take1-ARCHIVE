@@ -2,6 +2,7 @@
   text-align: center;
   background-repeat: no-repeat;
   background-color: #1b1b1b;
+  background-image: none !important;
   border-width: 2px;
   border-style: solid;
   border-color: black;
