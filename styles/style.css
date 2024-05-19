@@ -1,5 +1,14 @@
+:root {
+  --main:#1b1b1b;
+  --second:#252525;
+  --text:#d2d2d2;
+  --link:#0e5dad;
+  --linkvisited:#108998;
+  --linkhover:#131212;
+}
+
 body{
-  background-color:#1b1b1b;
+  background-color:var(--main);
   text-align: center;
   margin-left: 160px;
   padding: 0px 10px;
@@ -8,7 +17,7 @@ body{
 p,a,h1,h2,h3,h4,ul,li{
   font-family:"homestuck-font";
   font-size: x-large;
-  -webkit-text-fill-color: #d2d2d2;
+  -webkit-text-fill-color:var(--text);
   font-weight: bold;
 }
 h1{font-size: 24pt;}
@@ -17,12 +26,12 @@ img{
   border-style: solid;
   border-width: 2px;
   border-radius: 10px;
-  border-color: #000000;
+  border-color: black;
 }
 
-a:link{-webkit-text-fill-color: #0e5dad;}
-a:visited{-webkit-text-fill-color: #108998;}
-a:hover{background-color: #131212;}
+a:link{-webkit-text-fill-color:var(--link);}
+a:visited{-webkit-text-fill-color:var(--linkvisited);}
+a:hover{background-color:var(--linkhover);}
 a:hover:has(img){
   background: none;
   opacity: 70%;
@@ -37,7 +46,7 @@ ul.noBullets{
   padding: 0;
 }
 ul{
-  color: #d2d2d2;
+  color:var(--text);
   margin-top: 0;
 }
 .buttons li{padding: 8px 0px 1px;}

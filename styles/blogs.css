@@ -1,13 +1,22 @@
+:root {
+  --main:#1b1b1b;
+  --second:#252525;
+  --text:#d2d2d2;
+  --link:#0e5dad;
+  --linkvisited:#108998;
+  --linkhover:#131212;
+}
+
 body{
-  background-color:#1b1b1b;
+  background-color:var(--main);
 }
 
 main{
   display: block;
   padding: 10px;
-  background-color: #252525;
+  background-color:var(--second);
   margin: 1% 15%;
-  border-color: #000000;
+  border-color: black;
   border-radius: 5px;
   border-style: solid;
 }
@@ -15,15 +24,15 @@ main{
 p,h1,h2,h3,h4,ul,li{
   font-family:"homestuck-font";
   font-size: 140%;
-  -webkit-text-fill-color: #d2d2d2;
+  -webkit-text-fill-color:var(--text);
   font-weight: bold;
 }
 h1,h2,h3,h4,h5,h6{
   font-size: xx-large;
   font-weight: bolder;
-  background-color: #141414;
-  -webkit-text-fill-color: #d2d2d2;
-  border-color: #000000;
+  background-color:var(--main);
+  -webkit-text-fill-color: var(--text);
+  border-color: black;
   border-radius: 5px;
   border-style: solid;
   padding: 10px;
@@ -38,9 +47,13 @@ h1,h2,h3,h4,h5,h6{
   max-width: max-content;
 }
 
-a:link{-webkit-text-fill-color: #0e5dad;}
-a:visited{-webkit-text-fill-color: #108998;}
-a:hover{background-color: #131212;}
+a:link{-webkit-text-fill-color:var(--link);}
+a:visited{-webkit-text-fill-color:var(--linkvisited);}
+a:hover{background-color:var(--linkhover);}
+a:hover:has(img){
+  background: none;
+  opacity: 70%;
+}
 
 ul{color: #d2d2d2;}
 
