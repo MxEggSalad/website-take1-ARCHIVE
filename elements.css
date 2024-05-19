@@ -4,17 +4,24 @@
 }
 .site-box {
   text-align: center;
-  background-image: url(https://mxeggsalad.nekoweb.org/assets/fucked-up-cat-sitebox.png);
   background-repeat: no-repeat;
+  background-color: #1b1b1b;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
 }
-.site-box > a > p {
+.site-box > a {
   color: #005682;
   font-size: 15px;
   font-family: homestuck-font;
   font-weight: bold;
   display: block;
-  background-color: #1b1b1b;
+  background-color: #252525;
   padding: 2px;
+  margin: auto 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
 }
 .site-box > a > span {
   color: #005682;
