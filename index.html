@@ -18,36 +18,42 @@
   <meta name="twitter:image" content="https://mxeggsalad.nekoweb.org/assets/crustyinfanthighrez.jpg">
 
   <style>
-  body {
+  :root {
+    --main:#1b1b1b;
+    --second:#252525;
+    --text:#d2d2d2;
+    --link:#0e5dad;
+    --linkvisited:#108998;
+    --linkhover:#131212;}
+  body{
     background-image: url('/assets/background.png');
+    background-size: cover;
     text-align: center;
-    width: 800px;
-    height: 800px;
     margin-left: auto;
-    margin-right: auto;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    font-family: 'Courier New', Courier, monospace;
+    margin-right: auto;}
+  .mainbox{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 420px;
+    height: 310px;
+    background-color:var(--main);
+    -webkit-text-fill-color: var(--text);
+    font-family: homestuck-font;
     font-weight: bold;
-    font-size: x-large;} 
-  .mainbox {
-    width: 800;
-    height: 800;
-    padding: 10px;
-    padding-left: 50;
-    padding-right: 50;
-    box-sizing: border-box;
-    background-color: #004182;
-    text-align: center;
-    position: relative;
-    border: 3px;
-    border-color: whitesmoke;
-    border-radius: 6px;}
-  p,h1 {color: whitesmoke;}
-  a:link {color: white;}
-  a:hover {color: black!important;}
-  a:visited {color: white;}
+    font-size: x-large;
+    border-radius: 10px;
+    border:solid black;
+    border-width: 3px;
+    }
+  h1{margin-top: 10px;}
+  p{margin-bottom: 10px;}
+  a{-webkit-text-fill-color: var(--link);}
+  a:visited{-webkit-text-fill-color: var(--linkvisited);}
+  a:hover{background-color: var(--linkhover);}
   audio.stuck{
     position: fixed;
     z-index: 1;
@@ -55,15 +61,29 @@
     left: 0;
     margin: 3px;
   }
+  .web14{
+    image-rendering: pixelated;
+    position: absolute;
+    top: 0px;
+    bottom: 384px;
+    left: 270px;
+    right: 0;
+    margin: auto;
+    }
+  @font-face {
+  font-family: 'homestuck-font'; 
+  src: url('/assets/homestuck-font.ttf'); 
+  }
   </style>
 </head>
 <body>
   <div class="mainbox">
     <h1>Welcome!!!</h1>
-    <p>This site is intended for those over the age of 16</p>
+    <p>"Eliminate the ninnies and the twits"</p>
     <p>Everything is WIP<br>and probably god awfully coded.</p>
     <a href="homepage/">Enter ==&gt;</a>
   </div>
+  <img class="web14" src="assets/web14Rating.gif">
   <audio controls class="stuck" autoplay loop>
     <source src="assets/theMollusk.mp3" type="audio/mpeg">
     <source src="assets/theMollusk.ogg" type="audio/ogg">
