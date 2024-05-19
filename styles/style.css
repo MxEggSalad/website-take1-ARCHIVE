@@ -22,11 +22,16 @@ p,a,h1,h2,h3,h4,ul,li{
 }
 h1{font-size: 24pt;}
 h2{font-size: 22pt;}
+
 img{
   border-style: solid;
   border-width: 2px;
   border-radius: 10px;
   border-color: black;
+}
+
+audio{
+  margin: 30px auto;
 }
 
 a:link{-webkit-text-fill-color:var(--link);}
