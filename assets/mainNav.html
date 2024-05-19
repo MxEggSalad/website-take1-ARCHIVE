@@ -11,7 +11,7 @@
 
 .mainNav{
   height: 100%;
-  width: 120px;
+  max-width: 140;
   position: fixed;
   z-index: 5;
   top: 0;
@@ -25,13 +25,30 @@
   border-radius: 0px 10px 10px;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */}
-.logo{margin-top: 15px;}
+.logo{
+  margin-top: 15px;
+  border: 2px solid black; 
+  width: 170px;}
 .mainNav ul{
   list-style-type: none;
-  padding: 0px;
-  margin-top: 0;
-  font-size: 120%;}
-.links li{margin: 15px 0px;}
+  max-width: 150px;
+  padding: 0px 10px;
+  margin-top: 15px;
+  font-size: 120%;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: var(--main);
+  margin-bottom: 0;}
+.links li{margin-bottom: 15px; margin-top: 10px;}
+.myButton{
+  display: block;
+  background-color: var(--main);
+  padding: 15px;
+  padding-top: 8px;
+  border: 2px solid black;
+  border-radius: 10px;
+  max-width: 150px;
+}
 .myButton img{border: none;
   border-radius: 0;
   width: 100px;
@@ -51,7 +68,7 @@ p{margin: 0 auto;}
 
 .footBorder{
   position: fixed;
-  height: 65px;
+  height: 75px;
   width: 100%;
   bottom: 0;
   left: 0;
@@ -63,7 +80,7 @@ p{margin: 0 auto;}
   display: flex;
   user-select: none;
   gap: var(--gap);
-  height: 65px;	
+  height: 75px;	
   width: 100%;
   overflow: hidden;
   position: fixed;
@@ -99,14 +116,16 @@ footer{
   z-index: 6;
   transform: translate(-50%, 0);
   white-space: nowrap;
-  }
+  padding: 1px 3px;
+  margin-bottom: 4px;
+  background-color: var(--main);
+  border-radius: 10px;
+  border:2px solid;}
 footer p{
   font-size: medium;
   margin-bottom: 3px;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: normal;
-  background-color: var(--main);
-}
+  font-weight: normal;}
 footer a{
   font-size: medium;
   font-family: Arial, Helvetica, sans-serif;
@@ -117,13 +136,12 @@ footer img{
   border: none;
   border-radius: 0;
   height: 16px;
-  image-rendering: pixelated;
-}
+  image-rendering: pixelated;}
 </style>
 <div class="container">
   <div class="mainNav">
     <iframe class="followButton" src="https://nekoweb.org/frame/follow" width="150" height="40" title=""></iframe>
-    <img class="logo" src="/assets/crustyinfantscreamingforhelp.jpg" height="100" alt="">
+    <img class="logo" src="/assets/crustyinfantscreamingforhelp.jpg" alt="">
     <ul class="links">
       <li><a href="/homepage/" title="Main page of the website">Homepage</a></li>
       <li><a href="/blog/" title="Long articles, usually informative or based on my interests">Blog</a></li>
@@ -132,8 +150,10 @@ footer img{
       <li><a href="/about/" title="Outlines some information about this website and my contact information">About</a></li>
     </ul>
     <br>
-    <a class="myButton" href="/assets/buttons/mxeggsalad.nekoweb.org.gif">v My Button<br>
-    <img src="/assets/buttons/mxeggsalad.nekoweb.org.gif" alt=""></a>
+    <div class="myButton">
+      <a href="/assets/buttons/mxeggsalad.nekoweb.org.gif">My Button<br>
+      <img src="/assets/buttons/mxeggsalad.nekoweb.org.gif" alt=""></a>
+    </div>
   </div>
   <div class="buttonsScroller">
     <ul class="buttonsScrollerContent">
