@@ -1,18 +1,21 @@
-/* This file defines how custom elements will look like, setting CSS that breaks main nekoweb site on purpose is prohibited and may result in ban and site deletion! */
-/*ermm
-/* Must start with ".site-box". Change how your website will appear on main nekoweb site: https://lune.dimden.dev/405a44b7e5.png */
+@font-face {
+  font-family: 'homestuck-font'; 
+  src: url('https://mxeggsalad.nekoweb.org/assets/homestuck-font.ttf'); 
+}
 .site-box {
-    text-align: center;
-    background-image: url(https://mxeggsalad.nekoweb.org/assets/fucked-up-cat-sitebox.png); /* Only nekoweb URLs allowed, use full url to your site like https://example.nekoweb.org/images/coolbg.png */
-    background-repeat: no-repeat;
-    
+  text-align: center;
+  background-image: url(https://mxeggsalad.nekoweb.org/assets/fucked-up-cat-sitebox.png);
+  background-repeat: no-repeat;
 }
 .site-box > a > p {
-    color: #005682;
-    font-size: 15px;
-    font-family: Courier New;
-    font-weight: bold;
+  color: #005682;
+  font-size: 15px;
+  font-family: homestuck-font;
+  font-weight: bold;
+  display: block;
+  background-color: #1b1b1b;
+  padding: 2px;
 }
 .site-box > a > span {
-    color: #005682;
+  color: #005682;
 }
