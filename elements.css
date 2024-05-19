@@ -1,28 +1,23 @@
-@font-face {
-  font-family: 'homestuck-font'; 
-  src: url('https://mxeggsalad.nekoweb.org/assets/homestuck-font.ttf'); 
-}
 .site-box {
   text-align: center;
   background-repeat: no-repeat;
   background-color: #1b1b1b;
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
   border-color: black;
+  border-radius: 9px;
 }
-.site-box > a {
+.site-box > a > p{
   color: #005682;
   font-size: 15px;
-  font-family: homestuck-font;
+  font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   display: block;
-  background-color: #252525;
   padding: 2px;
-  margin: auto 4px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: black;
 }
 .site-box > a > span {
   color: #005682;
+}
+site-box > a > .sitefeature {
+  border: none; 
 }
