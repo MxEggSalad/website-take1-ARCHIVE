@@ -22,6 +22,10 @@
     .then(res => res.json())
     .then(res => {
     document.getElementById('message').innerHTML = res[0].commit.message
+    trunkatedText = res[0].commit.tree.sha
+    trunkatedText = trunkatedText.substring(0, 8)
+    console.log(trunkatedText)
+    document.getElementById('sha').innerHTML = trunkatedText
     })
   </script>
   <style>
@@ -50,7 +54,13 @@
       font-size: large;
       word-break: break-word;
       -webkit-text-fill-color:var(--text);
-      text-decoration: none;}
+      text-decoration: none;
+      margin-right: 10px;
+      margin-left: 10px;}
+    #sha{margin-bottom: 4px;}
+    #message{
+      margin-top: 0;
+      margin-right: }
     .latestCommit:hover{
       background-color:var(--second);
       opacity: 70%;}
@@ -97,6 +107,7 @@
     <a href="https://github.com/MxEggSalad/mxeggsalad-nekoweb/" class="latestCommit">
     <div>
       <p>Latest Commit</p>
+      <pre id="sha"></pre><time id="shorterDate"></time>
       <pre id="message">Loading/Rate limit</pre>
     </div>
     </a>
