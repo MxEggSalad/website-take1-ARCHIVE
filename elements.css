@@ -7,25 +7,29 @@
   border-style: solid;
   border-color: black;
   border-radius: 9px;
-  padding-bottom: 2px;
-}
-.site-box > a > p{
+  padding-bottom: 2px;}
+.site-box > a > p {
   color: #d2d2d2;
   font-size: 15px;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   display: block;
   padding: 2px;
-}
-.site-box > a > span {
-  color: #d2d2d2;
+  text-decoration: underline}
+.site-box > a > span {color: #d2d2d2;
   font-family: 'Courier New', Courier, monospace;
-}
-.site-box > a > .sitefeature {
-  border: none;
-}
-.site-box > a > .sitefeature > img{
+  font-weight: bold;}
+.site-box > a > .sitefeature {border: none;}
+.site-box > a > .sitefeature > img {
+  border: 2px solid black !important;
+  border-radius: 9px;}
+.site-box .sitefeature{
   border: 2px solid black !important;
   border-radius: 9px;
-  src: url(https://mxeggsalad.nekoweb.org/assets/crustyinfant.gif);
-}
+  content: url(https://mxeggsalad.nekoweb.org/assets/crustyinfant.gif);
+  width: 240px;
+  height: 130px;
+  background-position: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;}
