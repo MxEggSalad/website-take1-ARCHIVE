@@ -16,7 +16,8 @@
   display: block;
   padding: 2px;
   text-decoration: underline}
-.site-box > a > span {color: #d2d2d2;
+.site-box > a > span {
+  color: #d2d2d2;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;}
 .site-box > a > .sitefeature {border: none;}
