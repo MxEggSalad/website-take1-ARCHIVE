@@ -1,5 +1,4 @@
-.site-box {
-  text-align: center;
+.site-box {text-align: center;
   background-repeat: no-repeat;
   background-color: #1b1b1b;
   background-image: none !important;
@@ -7,18 +6,34 @@
   border-style: solid;
   border-color: black;
   border-radius: 9px;
-}
-.site-box > a > p{
-  color: #005682;
+  padding-bottom: 2px;
+  transition: transform .14s;}
+.site-box:hover{
+  transform: scale(1.3);
+  transition: transform .14s;}
+
+.site-box > a > p {color: #d2d2d2;
   font-size: 15px;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
   display: block;
   padding: 2px;
-}
-.site-box > a > span {
-  color: #005682;
-}
-site-box > a > .sitefeature {
-  border: none; 
-}
+  text-decoration: underline}
+
+.site-box > a > span {color: #d2d2d2;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;}
+
+.site-box > a > .sitefeature {border: none;}
+.site-box > a > .sitefeature > img {border: 2px solid black !important;
+  border-radius: 9px;}
+
+.site-box .sitefeature {border: 2px solid black !important;
+  border-radius: 9px;
+  content: url(//nekoweb.org/site/mxeggsalad/files/assets/crustyinfant.gif?original=1);
+  width: 240px;
+  height: 130px;
+  background-position: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;}
