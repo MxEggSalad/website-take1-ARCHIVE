@@ -7,9 +7,10 @@
   border-style: solid;
   border-color: black;
   border-radius: 9px;
+  padding-bottom: 2px;
 }
 .site-box > a > p{
-  color: #005682;
+  color: #d2d2d2;
   font-size: 15px;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
@@ -17,8 +18,14 @@
   padding: 2px;
 }
 .site-box > a > span {
-  color: #005682;
+  color: #d2d2d2;
+  font-family: 'Courier New', Courier, monospace;
 }
-site-box > a > .sitefeature {
-  border: none; 
+.site-box > a > .sitefeature {
+  border: none;
+}
+.site-box > a > .sitefeature > img{
+  border: 2px solid black !important;
+  border-radius: 9px;
+  src: url(https://mxeggsalad.nekoweb.org/assets/crustyinfant.gif);
 }
