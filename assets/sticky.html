@@ -22,6 +22,7 @@
   border-style: solid;
   border-width: 2px 2px 2px 0px;
   border-radius: 0px 10px 10px;
+  visibility: visible;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */}
 .mainNav > *{
@@ -84,7 +85,8 @@ body:has(#footerCheck:checked){margin-bottom: 10px;}
   left: 0;
   border-top: 2px black solid;
   border-right: 2px;
-  border-top-right-radius: 10px;}
+  border-top-right-radius: 10px;
+  visibility: visible;}
 .buttonsScroller {
   --gap: 0rem;
   display: flex;
@@ -99,7 +101,8 @@ body:has(#footerCheck:checked){margin-bottom: 10px;}
   left: 0;
   z-index: 6;
   margin: 0;
-  border-top-right-radius: 10px;}
+  border-top-right-radius: 10px;
+  visibility: visible;}
 .buttonsScrollerContent{
   flex-shrink: 0;
   display: flex;
@@ -131,7 +134,8 @@ footer{
   margin-bottom: 4px;
   background-color: var(--main);
   border-radius: 10px;
-  border:2px solid;}
+  border:2px solid;
+  visibility: visible;}
 footer p{
   font-size: medium;
   margin-top: auto;
@@ -189,8 +193,8 @@ window.addEventListener('change', save);
     </div>
     </div>
     <div class="checkboxes">
-      Hide Navbar <input type="checkbox" class="box" id="navbarCheck" checked>
-      Hide Footer <input type="checkbox" class="box" id="footerCheck" checked>
+      Hide Navbar <input type="checkbox" class="box" id="navbarCheck">
+      Hide Footer <input type="checkbox" class="box" id="footerCheck">
     </div>
   </div>
 
