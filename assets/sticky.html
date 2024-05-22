@@ -52,11 +52,16 @@
   margin-left: auto;
   margin-right: auto;}
 .checkboxes{
-  width: 160px;
+  width: 130px;
   margin-bottom: 90px;
+  margin-top: 24px;
   font-size: large;
   padding: 4px;
   visibility: visible !important;}
+.checkboxes p{
+  font-size: medium;
+  margin: 0px;
+}
 
 .mainNav:has(.checkboxes #navbarCheck:checked){
   visibility: hidden;
@@ -193,8 +198,8 @@ window.addEventListener('change', save);
     </div>
     </div>
     <div class="checkboxes">
-      Hide Navbar <input type="checkbox" class="box" id="navbarCheck">
-      Hide Footer <input type="checkbox" class="box" id="footerCheck">
+      <p>Hide Navbar</p><input type="checkbox" class="box" id="navbarCheck">
+      <p>Hide Footer</p><input type="checkbox" class="box" id="footerCheck">
     </div>
   </div>
 
