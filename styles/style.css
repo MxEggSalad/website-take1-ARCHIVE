@@ -12,17 +12,16 @@ body{
   text-align: center;
   margin-left: 170px;
   margin-bottom: 80px;
-  padding: 0px 10px;
-}
+  margin-right: 0px;
+  padding: 0px 15px;
 
-p,a,h1,h2,h3,h4,ul,li{
   font-family:"homestuck-font";
-  font-size: x-large;
+  font-size: 150%;
   -webkit-text-fill-color:var(--text);
   font-weight: bold;
 }
-h1{font-size: 24pt;}
-h2{font-size: 22pt;}
+
+
 
 img{
   border-style: solid;
@@ -32,7 +31,7 @@ img{
 }
 
 audio{
-  margin: 30px auto;
+  margin: 10px auto;
 }
 
 a:link{-webkit-text-fill-color:var(--link);}
