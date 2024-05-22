@@ -9,14 +9,14 @@
   <!--OG-->
   <meta name="og:title" content="mxeggsalad's Homepage">
   <meta name="og:description" content="A speradic display of my autistic tendencies and interests. Expect nonsense!!">
-  <meta name="og:image" content="https://mxeggsalad.nekoweb.org/assets/crustyinfantscreamingforhelp.jpg">
+  <meta name="og:image" content="https://mxeggsalad.nekoweb.org/assets/images/crustyinfantscreamingforhelp.jpg">
   <meta name="og:url" content="https://mxeggsalad.nekoweb.org/home/">
   <meta name="og:type" content="website">
   <!--Twitter-->
   <meta name="twitter:title" content="mxeggsalad's Home">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:creator" content="@mxeggsalad">
-  <meta name="twitter:image" content="https://mxeggsalad.nekoweb.org/assets/crustyinfantscreamingforhelp.jpg">
+  <meta name="twitter:image" content="https://mxeggsalad.nekoweb.org/assets/images/crustyinfantscreamingforhelp.jpg">
   <script>
     fetch('https://api.github.com/repos/MxEggSalad/mxeggsalad-nekoweb/commits?per_page=1')
     .then(res => res.json())
@@ -71,11 +71,9 @@
 
 <body>
   <header>
-    <h1>This is a Heading <br></h1>
+    <h1>This is a Heading<br></h1>
   </header>
 
-  <!--This is just here to preload stuff so it doesnt flash-->
-  <div class="mainNav"></div>
   <section id="mainNav"></section>
   <script>
     fetch("/assets/mainNav.html")
@@ -109,7 +107,7 @@
     <a href="https://github.com/MxEggSalad/mxeggsalad-nekoweb/" class="latestCommit">
     <div>
       <p>Latest Commit</p>
-      <pre id="sha"></pre><time id="shorterDate"></time>
+      <pre id="sha"></pre>
       <pre id="message">Loading/Rate limit</pre>
     </div>
     </a>
