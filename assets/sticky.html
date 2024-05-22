@@ -24,42 +24,50 @@
   border-radius: 0px 10px 10px;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */}
-.logo{
+.mainNav > *{
+  border: 2px solid black; 
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid black; 
-  width: 138px;}
+  border-radius: 10px;
+  background-color: var(--main);}
+.logo{width: 138px;}
 .mainNav ul{
   list-style-type: none;
   width: 110px;
   padding: 0px 14px;
-  margin: 11px auto 0 auto;
-  font-size: 120%;
-  border: 2px solid black;
-  border-radius: 10px;
-  background-color: var(--main);}
+  margin: inherit auto 0 auto;}
 .links li{margin-bottom: 15px; margin-top: 10px;}
 .myButton{
   width: 120px;
-  display: block;
-  background-color: var(--main);
-  padding-top: 8px;
-  border: 2px solid black;
-  border-radius: 10px;
-  max-width: 130px;
   padding: 9px;
-}
-
-.myButton img{border: none;
+  padding-top: 4px;
+  padding-bottom: 6px;}
+.myButton img{
+  border: none;
   border-radius: 0;
   width: 100px;
   margin-top: 2px;
   margin-left: auto;
-  margin-right: auto;
-  display: block;}
+  margin-right: auto;}
+.checkboxes{
+  width: 160px;
+  margin-bottom: 90px;
+  font-size: large;
+  padding: 4px;
+  visibility: visible !important;}
+
+.mainNav:has(.checkboxes #navbarCheck:checked){
+  visibility: hidden;
+  padding: 0 0 0 10px;}
+body:has(#navbarCheck:checked){margin-left: 0px !important;}
+
+body:has(#footerCheck:checked){margin-bottom: 10px;}
+.mainNav:has(#footerCheck:checked) ~ footer{visibility: hidden;}
+.mainNav:has(#footerCheck:checked) ~ .buttonsScroller{visibility: hidden;}
+.mainNav:has(#footerCheck:checked) ~ .footBorder{visibility: hidden;}
+
 .mainNav::-webkit-scrollbar {display: none;}
-p{margin: 0 auto;}
 
 .followButton{
   position: fixed;
@@ -108,6 +116,7 @@ p{margin: 0 auto;}
   border: none;
   border-radius: 0;}
 .buttonsScroller:hover .buttonsScrollerContent {animation-play-state: paused;}
+
 @keyframes scroll {from {transform: translateX(0);}to {transform: translateX(calc(-100% - var(--gap)));}}
 
 footer{
@@ -125,6 +134,8 @@ footer{
   border:2px solid;}
 footer p{
   font-size: medium;
+  margin-top: auto;
+  margin-bottom: auto;
   margin-bottom: 3px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;}
@@ -139,8 +150,28 @@ footer img{
   height: 16px;
   image-rendering: pixelated;}
 </style>
+<script>
+  let boxes = document.getElementsByClassName('box').length;
+
+  function save() {	
+    for(let i = 1; i <= boxes; i++){
+      var checkbox = document.getElementById(String(i));
+      localStorage.setItem("checkbox" + String(i), checkbox.checked);	
+    }
+  }
+
+  //for loading
+  for(let i = 1; i <= boxes; i++){
+    if(localStorage.length > 0){
+      var checked = JSON.parse(localStorage.getItem("checkbox" + String(i)));
+      document.getElementById(String(i)).checked = checked;
+    }
+  }
+window.addEventListener('change', save);
+</script>
 <div class="container">
   <iframe class="followButton" src="https://nekoweb.org/frame/follow" width="150" height="40" title=""></iframe>
+
   <div class="mainNav">
     <img class="logo" src="/assets/images/crustyinfantscreamingforhelp.jpg" alt="">
     <ul class="links">
@@ -150,14 +181,19 @@ footer img{
       <li><a href="/music/" title="Self explanatory">Music I Like</a></li>
       <li><a href="/about/" title="Outlines some information about this website and my contact information">About</a></li>
     </ul>
-    <br>
+
     <div class="myButton">
     <div>
-      <a href="/assets/buttons/mxeggsalad.nekoweb.org.gif" target="_blank">My Button<br>
+      <a href="/assets/buttons/mxeggsalad.nekoweb.org.gif" target="_blank">My Button
       <img src="/assets/buttons/mxeggsalad.nekoweb.org.gif" alt=""></a>
     </div>
     </div>
+    <div class="checkboxes">
+      Hide Navbar <input type="checkbox" class="box" id="navbarCheck" checked>
+      Hide Footer <input type="checkbox" class="box" id="footerCheck" checked>
+    </div>
   </div>
+
   <div class="buttonsScroller">
     <ul class="buttonsScrollerContent">
       <li><a href="https://voltbun.neocities.org/" tabindex="-1">

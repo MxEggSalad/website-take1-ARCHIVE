@@ -16,6 +16,15 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:creator" content="@mxeggsalad">
   <meta name="twitter:image" content="https://mxeggsalad.nekoweb.org/assets/images/crustyinfantscreamingforhelp.jpg">
+  <script>
+    fetch("/assets/sticky.html")
+      .then((response) => {
+        return response.text();
+      })
+      .then((data) => {
+        document.getElementById("sticky").innerHTML = data;
+      });
+  </script>
 </head>
 
 <body>
@@ -23,18 +32,7 @@
     <h1>Woahhh articles??? Thats crazy.</h1>
   </header>
 
-  <!--This is just here to preload stuff so it doesnt flash-->
-  <div class="mainNav"></div>
-  <section id="mainNav"></section>
-  <script>
-    fetch("/assets/mainNav.html")
-      .then((response) => {
-        return response.text();
-      })
-      .then((data) => {
-        document.getElementById("mainNav").innerHTML = data;
-      });
-  </script>
+  <section id="sticky"></section>
 
   <main>
     <p>

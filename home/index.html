@@ -18,6 +18,13 @@
   <meta name="twitter:creator" content="@mxeggsalad">
   <meta name="twitter:image" content="https://mxeggsalad.nekoweb.org/assets/images/crustyinfantscreamingforhelp.jpg">
   <script>
+    fetch("/assets/sticky.html")
+      .then((response) => {
+        return response.text();
+      })
+      .then((data) => {
+        document.getElementById("sticky").innerHTML = data;
+      });
     fetch('https://api.github.com/repos/MxEggSalad/mxeggsalad-nekoweb/commits?per_page=1')
     .then(res => res.json())
     .then(res => {
@@ -26,7 +33,7 @@
     trunkatedText = trunkatedText.substring(0, 8)
     console.log(trunkatedText)
     document.getElementById('sha').innerHTML = trunkatedText
-    })
+    }) 
   </script>
   <style>
     :root {
@@ -82,14 +89,14 @@
     <h1>This is a Heading<br></h1>
   </header>
 
-  <section id="mainNav"></section>
+  <section id="sticky"></section>
   <script>
-    fetch("/assets/mainNav.html")
+    fetch("/assets/sticky.html")
       .then((response) => {
         return response.text();
       })
       .then((data) => {
-        document.getElementById("mainNav").innerHTML = data;
+        document.getElementById("sticky").innerHTML = data;
       });
   </script>
 
@@ -104,7 +111,7 @@
         type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <h3>Crusty screaming babies are:</h3>
+    <h2>Crusty screaming babies are:</h2>
     <ul class="noBullets">
       <li>Cute</li>
       <li>Tasty</li>
@@ -121,10 +128,10 @@
     </a>
 
     <a href="/blog/main/screamingbabies/"> woah what the fuck is this </a>
-    <p><br>I intend to do a LOT more with this website but uhhhh, for the time being that i dont know css nor much html,
+    <p>I intend to do a LOT more with this website but uhhhh, for the time being that i dont know css nor much html,
       this will have to do<br>I cant promise much activity but attempts will be made!!!<br>Time being tho this is
       just testing</p>
-    <h3>Oh yeah also look ay my friend North's really cool art!!!!!!</h3>
+    <h2>Oh yeah also look ay my friend North's really cool art!!!!!!</h2>
     <a href="https://www.instagram.com/nommingwaffles/">
       <img src="assets/cat!!.jpg" height="500" alt="A digital drawing of a white cat yawning"></a>
     <a href="https://www.instagram.com/nommingwaffles/">
