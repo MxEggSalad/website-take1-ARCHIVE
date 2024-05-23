@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>Home</title>
   <link rel="stylesheet" href="/styles/style.css">
-  <link rel="script" href="/scripts/saveCheckboxes.js">
+  <script src="/scripts/checkboxLoad.js"></script>
   <meta name="author" content="mxeggsalad">
   <!--OG-->
   <meta name="og:title" content="mxeggsalad's Homepage">
@@ -19,13 +19,22 @@
   <meta name="twitter:creator" content="@mxeggsalad">
   <meta name="twitter:image" content="https://mxeggsalad.nekoweb.org/assets/images/crustyinfantscreamingforhelp.jpg">
   <script>
-    fetch("/assets/sticky.html")
+    fetch("/assets/buttons.html")
       .then((response) => {
         return response.text();
       })
       .then((data) => {
-        document.getElementById("sticky").innerHTML = data;
+        document.getElementById("buttons").innerHTML = data;
       });
+    fetch('https://api.github.com/repos/MxEggSalad/mxeggsalad-nekoweb/commits?per_page=1')
+    .then(res => res.json())
+    .then(res => {
+    document.getElementById('message').innerHTML = res[0].commit.message
+    trunkatedText = res[0].commit.tree.sha
+    trunkatedText = trunkatedText.substring(0, 8)
+    console.log(trunkatedText)
+    document.getElementById('sha').innerHTML = trunkatedText
+    })
   </script>
   <style>
     :root {
@@ -48,28 +57,22 @@
       text-decoration: none;
       border: 2px solid black;
       border-radius: 10px;}
-    .latestCommit > div > p{
-      text-decoration: underline;
-    }
-    .latestCommit pre{
-      font-size: large;
-      -webkit-text-fill-color:var(--text);
-      text-decoration: none;
-      margin-right: 10px;
-      margin-left: 10px;}
     .latestCommit p{
       margin-top: 2px;
-      margin-bottom: 10px;
-    }
+      margin-bottom: 10px;}
+    .link{      
+      text-decoration: underline;}
     #sha{
       margin-top: 10px;
       margin-bottom: 4px;
-      margin-left: 10px;
-    margin-right: 10px;}
+      -webkit-text-fill-color: var(--text);
+      font-size: large;
+      font-family: monospace}
     #message{
       margin-top: 0;
-      margin-right: 10px;
-      margin-left: 10px;}
+      -webkit-text-fill-color: var(--text);
+      font-size: large;
+      font-family: monospace}
     .latestCommit:hover{
       background-color:var(--second);
       opacity: 70%;}
@@ -81,11 +84,36 @@
     <h1>This is a Heading<br></h1>
   </header>
 
-  <section id="sticky"></section>
+  <!--Navbar + follow button bcs im lazy-->
+  <div class="container">
+    <iframe class="followButton" src="https://nekoweb.org/frame/follow" width="150" height="40" title=""></iframe>
+    <div class="mainNav">
+      <img class="logo" src="/assets/images/crustyinfantscreamingforhelp.jpg" alt="" width="138px" height="138px">
+      <ul class="links">
+        <li><a href="/home/" title="Main page of the website">Home</a></li>
+        <li><a href="/blog/" title="Long articles, usually informative or based on my interests">Blog</a></li>
+        <li><a href="/kibbles/" title="Smaller, tid bit twitter like writings">Kibbles</a></li>
+        <li><a href="/music/" title="Self explanatory">Music I Like</a></li>
+        <li><a href="/about/" title="Outlines some information about this website and my contact information">About</a></li>
+      </ul>
+
+      <div class="myButton">
+      <div>
+        <a href="/assets/buttons/mxeggsalad.nekoweb.org.gif" target="_blank">My Button
+        <img src="/assets/buttons/mxeggsalad.nekoweb.org.gif" alt="" height="35" width="100"></a>
+      </div>
+      </div>
+      <div class="checkboxes" title="<!--WARNING SLIGHT FLASHING-->">
+        <p>Hide Navbar</p><input type="checkbox" class="box" id="navbarCheck" >
+        <p>Hide Footer</p><input type="checkbox" class="box" id="footerCheck" >
+      </div>
+    </div>
+  </div>
+  <!--ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh-->
 
   <main>
     <p>This is a paragraph.</p>
-    <img src="assets/crustyinfantscreamingforhelp.jpg" alt="screaming baby covered in ash. arms raised and mouth agape.">
+    <img src="assets/crustyinfantscreamingforhelp.jpg" height="125" width="125" alt="screaming baby covered in ash. arms raised and mouth agape.">
     <p>This is a crusty, screaming baby.</p>
     <audio controls>
       <source src="assets/halflife2-stalker-scream-sound-effect.mp3"
@@ -104,9 +132,9 @@
     </ul>
     <a href="https://github.com/MxEggSalad/mxeggsalad-nekoweb/" class="latestCommit">
     <div>
-      <p>Latest Commit</p>
-      <pre id="sha"></pre>
-      <pre id="message">Loading/Rate limit</pre>
+      <p class="link">Latest Commit</p>
+      <p id="sha"></p>
+      <p id="message">Loading/Rate limit</p>
     </div>
     </a>
 
@@ -116,9 +144,10 @@
       just testing</p>
     <h2>Oh yeah also look ay my friend North's really cool art!!!!!!</h2>
     <a href="https://www.instagram.com/nommingwaffles/">
-      <img src="assets/cat!!.jpg" height="500" alt="A digital drawing of a white cat yawning"></a>
+      <img src="assets/cat!!.jpg" height="500" width="500" alt="A digital drawing of a white cat yawning"></a>
     <a href="https://www.instagram.com/nommingwaffles/">
-      <img src="assets/north-madoka.jpg" height="500" alt="Painting of Madoka pulling back a bow"></a>
+      <img src="assets/north-madoka.jpg" height="500" width="500" alt="Painting of Madoka pulling back a bow"></a>
   </main>
+  <div id="buttons"></div>
 </body>
 </html>

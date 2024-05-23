@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Music</title>
   <link rel="stylesheet" href="/styles/style.css">
-  <link rel="script" href="/scripts/saveCheckboxes.js">
+  <script src="/scripts/checkboxLoad.js"></script>
   <meta name="author" content="mxeggsalad">
   <!--OG-->
   <meta name="og:title" content="mxeggsalad's Music Page">
@@ -18,12 +18,12 @@
   <meta name="twitter:creator" content="@mxeggsalad">
   <meta name="twitter:image" content="https://mxeggsalad.nekoweb.org/assets/images/crustyinfantscreamingforhelp.jpg">
   <script>
-    fetch("/assets/sticky.html")
+    fetch("/assets/buttons.html")
       .then((response) => {
         return response.text();
       })
       .then((data) => {
-        document.getElementById("sticky").innerHTML = data;
+        document.getElementById("buttons").innerHTML = data;
       });
   </script>
   <style>
@@ -47,7 +47,32 @@
     <h1>Collation of music i like!!</h1>
   </header>
 
-  <section id="sticky"></section>
+  <!--Navbar + follow button bcs im lazy-->
+  <div class="container">
+    <iframe class="followButton" src="https://nekoweb.org/frame/follow" width="150" height="40" title=""></iframe>
+    <div class="mainNav">
+      <img class="logo" src="/assets/images/crustyinfantscreamingforhelp.jpg" alt="" width="138px" height="138px">
+      <ul class="links">
+        <li><a href="/home/" title="Main page of the website">Home</a></li>
+        <li><a href="/blog/" title="Long articles, usually informative or based on my interests">Blog</a></li>
+        <li><a href="/kibbles/" title="Smaller, tid bit twitter like writings">Kibbles</a></li>
+        <li><a href="/music/" title="Self explanatory">Music I Like</a></li>
+        <li><a href="/about/" title="Outlines some information about this website and my contact information">About</a></li>
+      </ul>
+
+      <div class="myButton">
+      <div>
+        <a href="/assets/buttons/mxeggsalad.nekoweb.org.gif" target="_blank">My Button
+        <img src="/assets/buttons/mxeggsalad.nekoweb.org.gif" alt="" height="35" width="100"></a>
+      </div>
+      </div>
+      <div class="checkboxes" title="<!--WARNING SLIGHT FLASHING-->">
+        <p>Hide Navbar</p><input type="checkbox" class="box" id="navbarCheck" >
+        <p>Hide Footer</p><input type="checkbox" class="box" id="footerCheck" >
+      </div>
+    </div>
+  </div>
+  <!--ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh-->
 
   <main>
     <!--When i have an actual layout, just display this on the homepage alongside a "user profile"-->
@@ -81,5 +106,6 @@
       <img src="assets/Ween - The Mollusk.webp" title="Ween - The Mollusk" alt=" ">
     </div>
   </main>
+  <div id="buttons"></div>
 </body>
 </html>
