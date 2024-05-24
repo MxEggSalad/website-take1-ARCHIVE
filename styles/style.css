@@ -25,20 +25,16 @@ body{
 }
 p,ul,h1,h2,h3,h4,h5,h6{color:var(--text);}
 
-a:has(img){
-  max-width: inherit;
-  margin-left: inherit;
-  margin-right: inherit;
-}
-
 img{
   border-style: solid;
   border-width: 2px;
   border-radius: 10px;
   border-color: var(--border);
-  max-width: inherit;
-  margin-left: inherit;
-  margin-right: inherit;
+}
+.reactive{
+  width: 100%;
+  max-width: max-content;
+  height: auto;
 }
 
 audio{
