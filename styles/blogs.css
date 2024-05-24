@@ -5,6 +5,7 @@
   --link:#0e5dad;
   --linkvisited:#108998;
   --linkhover:#131212;
+  --border:black;
 }
 @font-face {
   font-family: 'homestuck-font'; 
@@ -19,8 +20,7 @@ main{
   display: block;
   padding: 10px;
   background-color:var(--second);
-  margin: 1% 15%;
-  border-color: black;
+  border-color: var(--border);
   border-radius: 5px;
   border-style: solid;
 }

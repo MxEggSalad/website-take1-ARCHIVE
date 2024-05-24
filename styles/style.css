@@ -5,6 +5,7 @@
   --link:#0e5dad;
   --linkvisited:#108998;
   --linkhover:#131212;
+  --border:black;
 }
 @font-face {
   font-family: 'homestuck-font'; 
@@ -29,6 +30,7 @@ img{
   border-style: solid;
   border-width: 2px;
   border-radius: 10px;
+  border-color: var(--border);
   border-color: black;
 }
 
@@ -79,7 +81,7 @@ iframe {border: none;}
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */}
 .mainNav > *{
-  border: 2px solid black; 
+  border: 2px solid var(--border); 
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
@@ -143,7 +145,7 @@ body:has(#footerCheck:checked) .buttonsScroller{display: none;}
   bottom: 0;
   left: 0;
   z-index: 1;
-  border-top: 2px black solid;
+  border-top: 2px var(--border) solid;
   border-right: 2px;
   border-top-right-radius: 10px;}
 .buttonsScroller {
