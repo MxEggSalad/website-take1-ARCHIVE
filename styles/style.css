@@ -24,6 +24,11 @@ body{
   font-weight: bold;
 }
 p,ul,h1,h2,h3,h4,h5,h6{color:var(--text);}
+
+a:has(img){
+  max-width: inherit;
+  margin-left: inherit;
+  margin-right: inherit;
 }
 
 img{
@@ -31,7 +36,9 @@ img{
   border-width: 2px;
   border-radius: 10px;
   border-color: var(--border);
-  border-color: black;
+  max-width: inherit;
+  margin-left: inherit;
+  margin-right: inherit;
 }
 
 audio{

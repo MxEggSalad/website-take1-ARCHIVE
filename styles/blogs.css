@@ -38,9 +38,9 @@ h1,h2,h3,h4,h5,h6{
   font-weight: bolder;
   background-color:var(--main);
   color: var(--text);
-  border-color: black;
-  border-radius: 5px;
-  border-style: solid;
+  border-color: inherit;
+  border-radius: inherit;
+  border-style: inherit;
   padding: 10px;
   margin: 0;
 }
