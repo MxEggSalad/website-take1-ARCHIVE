@@ -6,6 +6,10 @@
   --linkvisited:#108998;
   --linkhover:#131212;
 }
+@font-face {
+  font-family: 'homestuck-font'; 
+  src: url('/assets/homestuck-font.ttf'); 
+}
 
 body{
   background-color:var(--main);
@@ -23,15 +27,15 @@ main{
 
 p,h1,h2,h3,h4,ul,li{
   font-family:"homestuck-font";
+  color: var(--text);
   font-size: 140%;
-  -webkit-text-fill-color:var(--text);
   font-weight: bold;
 }
 h1,h2,h3,h4,h5,h6{
   font-size: xx-large;
   font-weight: bolder;
   background-color:var(--main);
-  -webkit-text-fill-color: var(--text);
+  color: var(--text);
   border-color: black;
   border-radius: 5px;
   border-style: solid;
@@ -55,11 +59,4 @@ a:hover:has(img){
   opacity: 70%;
 }
 
-ul{color: #d2d2d2;}
-
 iframe {border: none;}
-
-@font-face {
-  font-family: 'homestuck-font'; 
-  src: url('/assets/homestuck-font.ttf'); 
-}

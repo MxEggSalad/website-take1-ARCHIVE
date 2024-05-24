@@ -6,6 +6,10 @@
   --linkvisited:#108998;
   --linkhover:#131212;
 }
+@font-face {
+  font-family: 'homestuck-font'; 
+  src: url('/assets/homestuck-font.ttf'); 
+}
 
 body{
   background-color:var(--main);
@@ -14,13 +18,11 @@ body{
   margin-bottom: 80px;
   margin-right: 0px;
   padding: 0px 15px;
-
-  font-family:"homestuck-font";
+  font-family: "Courier", "Courier New", "homestuck-font";
   font-size: 150%;
   font-weight: bold;
 }
-p,a,ul,h1,h2,h3,h4,h5,h6{
-  -webkit-text-fill-color:var(--text);
+p,ul,h1,h2,h3,h4,h5,h6{color:var(--text);}
 }
 
 img{
@@ -34,8 +36,8 @@ audio{
   margin: 10px auto;
 }
 
-a:link{-webkit-text-fill-color:var(--link);}
-a:visited{-webkit-text-fill-color:var(--linkvisited);}
+a:link{color:var(--link);}
+a:visited{color: var(--linkvisited);}
 a:hover{background-color:var(--linkhover);}
 a:hover:has(img){
   background: none;
@@ -55,10 +57,6 @@ ul{
   margin-top: 0;
 }
 
-@font-face {
-  font-family: 'homestuck-font'; 
-  src: url('/assets/homestuck-font.ttf'); 
-}
 
 iframe {border: none;}
 
