@@ -105,6 +105,10 @@ iframe {border: none;}
   margin-left: auto;
   margin-right: auto;}
 .checkboxes{
+
+  /* Disabling this till i can get it working properly */
+  display: none;
+
   width: 130px;
   margin-bottom: 90px;
   margin-top: 24px;
