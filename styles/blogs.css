@@ -19,6 +19,7 @@ body{
 main{
   display: block;
   padding: 10px;
+  margin: 10px 15% 30px 15%;
   background-color:var(--second);
   border-color: var(--border);
   border-radius: 5px;
@@ -30,6 +31,7 @@ p,h1,h2,h3,h4,ul,li{
   color: var(--text);
   font-size: 140%;
   font-weight: bold;
+  margin-bottom: 0;
 }
 h1,h2,h3,h4,h5,h6{
   font-size: xx-large;
@@ -41,6 +43,9 @@ h1,h2,h3,h4,h5,h6{
   border-style: solid;
   padding: 10px;
   margin: 0;
+}
+img{
+  margin: 40px ;
 }
 
 .center{
