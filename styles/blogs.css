@@ -27,14 +27,14 @@ main{
 }
 
 p,h1,h2,h3,h4,ul,li{
-  font-family:"homestuck-font";
+  font-family: "Courier New", "homestuck-font";
   color: var(--text);
   font-size: 140%;
   font-weight: bold;
   margin-bottom: 0;
 }
 h1,h2,h3,h4,h5,h6{
-  font-size: xx-large;
+  font-size: 190%;
   font-weight: bolder;
   background-color:var(--main);
   color: var(--text);
