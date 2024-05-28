@@ -14,38 +14,59 @@
 
 body{
   background-color:var(--main);
+  font-family: "Courier New", "homestuck-font";
 }
 
 main{
   display: block;
-  padding: 10px;
+  padding: 15px;
   margin: 10px 15% 30px 15%;
   background-color:var(--second);
-  border-color: var(--border);
+  border: 3px solid var(--border);
   border-radius: 5px;
-  border-style: solid;
+}
+
+p{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+strong{
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: var(--main);
+  padding: 2px;
 }
 
 p,h1,h2,h3,h4,ul,li{
-  font-family: "Courier New", "homestuck-font";
   color: var(--text);
   font-size: 140%;
   font-weight: bold;
-  margin-bottom: 0;
 }
 h1,h2,h3,h4,h5,h6{
   font-size: 190%;
   font-weight: bolder;
   background-color:var(--main);
   color: var(--text);
-  border-color: inherit;
+  border: inherit;
   border-radius: inherit;
-  border-style: inherit;
   padding: 10px;
   margin: 0;
 }
+
 img{
   margin: 40px ;
+}
+p > img{
+  margin-top: 5px;
+}
+p:has(img){
+  background-color: var(--main);
+  padding: 10px;
+  border: inherit;
+  border-radius: inherit;
+  margin-left: 12%;
+  margin-right: 12%;
 }
 
 .center{
