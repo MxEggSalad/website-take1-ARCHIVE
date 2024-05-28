@@ -20,27 +20,15 @@ body{
 main{
   display: block;
   padding: 15px;
-  margin: 10px 15% 30px 15%;
+  margin: 10px 13% 30px 13%;
   background-color:var(--second);
   border: 3px solid var(--border);
   border-radius: 5px;
 }
 
-p{
-  margin-left: 30px;
-  margin-right: 30px;
-}
-
-strong{
-  border: 2px solid black;
-  border-radius: 5px;
-  background-color: var(--main);
-  padding: 2px;
-}
-
 p,h1,h2,h3,h4,ul,li{
   color: var(--text);
-  font-size: 140%;
+  font-size: 150%;
   font-weight: bold;
 }
 h1,h2,h3,h4,h5,h6{
@@ -52,6 +40,12 @@ h1,h2,h3,h4,h5,h6{
   border-radius: inherit;
   padding: 10px;
   margin: 0;
+}
+
+p{
+  margin-left: 30px;
+  margin-right: 30px;
+  line-height: 1.2;
 }
 
 img{
@@ -75,6 +69,13 @@ p:has(img){
   margin-right: auto;
   width: 80%;
   max-width: max-content;
+}
+
+strong{
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: var(--main);
+  padding: 1px 2px 1px 2px;
 }
 
 a:link{-webkit-text-fill-color:var(--link);}
