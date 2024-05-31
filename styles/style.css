@@ -187,21 +187,26 @@ body:has(#footerCheck:checked) .buttonsScroller{display: none;}
 
 @keyframes scroll {from {transform: translateX(0);}to {transform: translateX(calc(-100% - var(--gap)));}}
 
+h2:has(+p .mainFeed){
+  margin-bottom: 4px;
+}
+p:has(.mainFeed){
+  margin-top: 0px;
+}
+
 #feedButton{
   margin-top: 0;
   font-size: 80%;
-  position: absolute;
   background: linear-gradient(to bottom, #f89738 0%, #e4722e 100%);  color: white;
   padding: 2px 5px 1px 3px;
   border: 4px ridge white;
+  margin-left: auto;
+  margin-right: auto;
 }
 #feedButton:hover{
   opacity: 70%;
 }
-#feedButton.mainFeed{
-  top: 450px;
-  right: 130px;
-}
+
 
 footer{
   bottom: 0;
