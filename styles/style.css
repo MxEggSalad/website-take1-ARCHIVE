@@ -61,7 +61,9 @@ ul{
   color:var(--text);
   margin-top: 0;
 }
-
+li{
+  padding-bottom: 20px;
+}
 
 iframe {border: none;}
 
@@ -95,7 +97,7 @@ iframe {border: none;}
   width: 110px;
   padding: 0px 14px;
   margin: inherit auto 0 auto;}
-.links li{margin-bottom: 15px; margin-top: 10px;}
+.links li{padding-bottom: 10px; padding-top: 10px;}
 .myButton{
   width: 120px;
   padding: 9px;
