@@ -36,6 +36,10 @@ img{
   max-width: max-content;
   height: auto;
 }
+.borderless{
+  border: unset;
+  border-radius: unset;
+}
 
 audio{
   margin: 10px auto;
@@ -62,7 +66,7 @@ ul{
   margin-top: 0;
 }
 li{
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 iframe {border: none;}
