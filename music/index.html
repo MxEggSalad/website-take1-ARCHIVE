@@ -27,21 +27,50 @@
       });
   </script>
   <style>
+    .box{
+      margin: 10px;
+      margin: 50px auto 50px auto;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 4px 30px 30px 30px;
+      border: 2px solid black;
+      border-radius: 10px;
+      background-color: var(--second);
+    }
+    .lastfm{
+      max-width: fit-content;
+      max-height: fit-content;
+      padding-bottom: 15px;
+      padding-top: 0px;
+      margin-bottom: -20px;
+      border-bottom: none;
+    }
+    .lastfm h2{
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .collections{
+      max-width: fit-content;
+      max-height: fit-content;
+      padding-bottom: 0px;
+      padding-top: 0px;
+
+      display: none;
+    }
+    .collections h2{
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
     .albums h2{
       margin-top: 15px;
     }
     .albums{
-      margin: 10px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 90px;
-      padding: 4px 30px 30px 30px;
       max-width: 940px;
-      border: 2px solid black;
-      border-radius: 10px;
-      background-color: var(--second);}
+      margin-bottom: 90px;
+    }
     .albums img{
       height: 120px;
+      width: 120px;
     }
   </style>
 </head>
@@ -61,7 +90,7 @@
         <li><a href="/blogs/" title="Long articles, usually informative or based on my interests">Blogs</a></li>
         <li><a href="/music/" title="Self explanatory">Music I Like</a></li>
         <li><a href="/about/" title="Outlines some information about this website and my contact information">About</a></li>
-<li><a href="https://mxeggsalad.atabook.org/" title="(Offsite)">Atabook</a></li>
+        <li><a href="https://mxeggsalad.atabook.org/" title="(Offsite)">Atabook</a></li>
       </ul>
 
       <div class="myButton">
@@ -80,12 +109,19 @@
 
   <main>
     <!--When i have an actual layout, just display this on the homepage alongside a "user profile"-->
-    <h2>last.fm</h2>
+    <div class="box lastfm">
+      <h2>last.fm</h2>
+    </div>
       <a href="https://www.last.fm/user/mxeggsalad">
       <img src="https://lastfm-recently-played.vercel.app/api?user=mxeggsalad&t={{current_timestamp}}" 
-      height="auto" width="350px" alt="last.fm"></a><br><br>
+      height="auto" width="350px" alt="last.fm">
+    </a>
 
-    <div class="albums" title="Album images are REALLY compressed. There may be webpages linked to these some day...">
+    <div class="box collections">
+      <h2><a href="./music/">Collection</a></h2>
+    </div>
+
+    <div class="box albums" title="Album images are REALLY compressed. There may be webpages linked to these some day...">
       <h2>Albums</h2>
       <img src="./assets/albums/aNTOJE - 3D PRINT3D STR4p.png" title="aNTOJE - 3D PRINT3D STR4p" alt="aNTOJE - 3D PRINT3D STR4p">
       <img src="./assets/albums/aNTOJE - TAPE 1.png" title="aNTOJE - TAPE #1" alt="aNTOJE - TAPE #1">
