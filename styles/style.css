@@ -86,7 +86,6 @@ iframe {border: none;}
   border-style: solid;
   border-width: 2px 2px 2px 0px;
   border-radius: 0px 10px 10px;
-  visibility: visible;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */}
 .mainNav > *{
@@ -113,31 +112,6 @@ iframe {border: none;}
   margin-top: 2px;
   margin-left: auto;
   margin-right: auto;}
-.checkboxes{
-
-  /* Disabling this till i can get it working properly */
-  display: none;
-
-  width: 130px;
-  margin-bottom: 90px;
-  margin-top: 24px;
-  font-size: large;
-  padding: 4px;
-  visibility: visible !important;}
-.checkboxes p{
-  font-size: medium;
-  margin: 0px;
-}
-
-.mainNav:has(.checkboxes #navbarCheck:checked){visibility: hidden;}
-.mainNav:has(.checkboxes #navbarCheck:checked) ul{display: none;}
-body:has(#navbarCheck:checked){margin-left: 0px !important;}
-
-body:has(#footerCheck:checked){margin-bottom: 10px;}
-body:has(#footerCheck:checked) footer{display: none;}
-body:has(#footerCheck:checked) .footBorder{display: none;} 
-body:has(#footerCheck:checked) .buttonsScroller{display: none;}
-
 
 .mainNav::-webkit-scrollbar {display: none;}
 
