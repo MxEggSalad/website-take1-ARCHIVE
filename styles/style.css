@@ -183,7 +183,7 @@ body:has(#footerCheck:checked) .buttonsScroller{display: none;}
   padding: 0;}
 .buttonsScrollerContent img{
   width: 100px;
-  height: 35; 
+  height: 35;
   margin: 6px;
   border: none;
   border-radius: 0;}
