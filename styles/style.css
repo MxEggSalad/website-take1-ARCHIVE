@@ -23,13 +23,11 @@ body{
   font-size: 150%;
   font-weight: bold;
 }
-p,ul,h1,h2,h3,h4,h5,h6{color:var(--text);}
+p,ul,li,h1,h2,h3,h4,h5,h6{color:var(--text);}
 
 img{
-  border-style: solid;
-  border-width: 2px;
+  border: 2px solid var(--border);
   border-radius: 10px;
-  border-color: var(--border);
 }
 .reactive{
   width: 100%;
@@ -52,21 +50,22 @@ a:hover:has(img){
   background: none;
   opacity: 70%;
 }
-/* Makes lists look less nautious when paired with text-align: center; */
-ul.myUL {
-  display: inline-block;
-  text-align: left;
-}
-ul.noBullets{
-  list-style-type: none;
-  padding: 0;
-}
+
 ul{
   color:var(--text);
   margin-top: 0;
 }
 li{
   padding-bottom: 15px;
+}
+/* Makes lists look less nautious when paired with text-align: center; */
+ul.myUL { /* I HATE THIS THINGS NAME. TOO LAZY TO CHANGE */
+  display: inline-block;
+  text-align: left;
+}
+ul.noBullets{
+  list-style-type: none;
+  padding: 0;
 }
 
 iframe {border: none;}
@@ -75,7 +74,6 @@ iframe {border: none;}
 /* Just stuff for sticky navbar */
 .mainNav{
   height: 100%;
-  max-width: 140;
   position: fixed;
   z-index: 2;
   top: 0;
@@ -83,6 +81,7 @@ iframe {border: none;}
   padding: 0 14px;
   background-color:var(--second);
   overflow-x: hidden;
+  /* hate having to rule the border like this */
   border-style: solid;
   border-width: 2px 2px 2px 0px;
   border-radius: 0px 10px 10px;
@@ -119,7 +118,8 @@ iframe {border: none;}
   position: fixed;
   top: 0;
   right: 0;
-  margin: 3px;}
+  margin: 3px;
+}
 
 .footBorder{
   position: fixed;
@@ -130,7 +130,8 @@ iframe {border: none;}
   z-index: 1;
   border-top: 2px var(--border) solid;
   border-right: 2px;
-  border-top-right-radius: 10px;}
+  border-top-right-radius: 10px;
+}
 .buttonsScroller {
   --gap: 0rem;
   display: flex;
@@ -157,7 +158,7 @@ iframe {border: none;}
   padding: 0;}
 .buttonsScrollerContent img{
   width: 100px;
-  height: 35;
+  height: 35px;
   margin: 6px;
   border: none;
   border-radius: 0;}
@@ -185,7 +186,6 @@ p:has(.mainFeed){
   opacity: 70%;
 }
 
-
 footer{
   bottom: 0;
   left: 50%;
@@ -194,26 +194,25 @@ footer{
   z-index: 6;
   transform: translate(-50%, 0);
   white-space: nowrap;
-  padding: 1px 3px;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
   background-color: var(--main);
   border-radius: 10px;
-  border:2px solid;
-  visibility: visible;}
+  border:2px solid var(--border);
+  visibility: visible;
+}
 footer p{
   font-size: medium;
   margin-top: auto;
-  margin-bottom: auto;
-  margin-bottom: 3px;
+  padding: 1px 3px;
+  margin-bottom: 0;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: normal;}
-footer a{
-  font-size: medium;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: normal;}
+  font-weight: normal;
+}
 footer img{
   vertical-align:text-bottom;
   border: none;
   border-radius: 0;
   height: 16px;
-  image-rendering: pixelated;}
+  image-rendering: pixelated;
+  padding-bottom: 2px;
+}
