@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+
+<head>
+  <meta charset="utf-8">
+  <title>Micro Blogs</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <meta name="author" content="mxeggsalad">
+  <!--OG-->
+  <meta name="og:title" content="mxeggsalad's Microblogs">
+  <meta name="og:description" content="Tini-Tiny bites of text that I dont feel like writing about in a long format.">
+  <meta name="og:image" content="https://mxeggsalad.nekoweb.org/assets/images/crustyinfantscreamingforhelp.jpg">
+  <meta name="og:url" content="https://mxeggsalad.nekoweb.org/microblogs/">
+  <meta name="og:type" content="website">
+  <!--Twitter-->
+  <meta name="twitter:title" content="mxeggsalad's Microblogs">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@mxeggsalad">
+  <meta name="twitter:image" content="https://mxeggsalad.nekoweb.org/assets/images/crustyinfantscreamingforhelp.jpg">
+  <script>
+    fetch("/assets/buttons.html")
+      .then((response) => {
+        return response.text();
+      })
+      .then((data) => {
+        document.getElementById("buttons").innerHTML = data;
+      });
+  </script>
+    <style>
+      :root {
+        --main:#1b1b1b;
+        --second:#252525;
+        --text:#d2d2d2;
+        --link:#0e5dad;
+        --linkvisited:#108998;
+        --linkhover:#131212;
+        --border:black;}
+      #microblogsFrame{
+        border: 2px solid var(--border);
+        border-radius: 10px;
+        width: 90%;
+        height: 500px;
+        background-color: var(--second);}
+    </style>
+</head>
+
+<body>
+  <header>
+    <h1>TINY TINY TINY TINY<br></h1>
+  </header>
+
+  <!--Navbar + follow button bcs im lazy-->
+  <div class="container">
+    <iframe class="followButton" src="https://nekoweb.org/frame/follow" width="150" height="40" title=""></iframe>
+    <div class="mainNav">
+      <img class="logo" src="/assets/images/crustyinfantscreamingforhelp.jpg" alt="" width="138px" height="138px">
+      <ul class="links">
+        <li><a href="/home/" title="Main page of the website">Home</a></li>
+        <li><a href="/profile/" title="All of my,,, personal DOX!!! Find out about me here >;3">Profile</a></li>
+        <li><a href="/blogs/" title="Long articles, usually informative or based on my interests">Blogs</a></li>
+        <li><a href="/microblogs/" title="Blogs, but but but but REALLY small"><i>micro</i> Blogs</a></li>
+        <li><a href="/music/" title="Self explanatory">Music I Like</a></li>
+        <li><a href="/about/" title="Outlines some information about this website and my contact information">About</a></li>
+        <li><a href="https://mxeggsalad.atabook.org/" title="(Offsite)">Atabook</a></li>
+      </ul>
+
+      <div class="myButton">
+        <div>
+          <a href="/assets/buttons/mxeggsalad.nekoweb.org.gif" target="_blank">My Button
+          <img src="/assets/buttons/mxeggsalad.nekoweb.org.gif" alt="" height="35" width="100"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh-->
+
+  <main>
+    <p>(idea stolen from <a href="https://shovel.nekoweb.org/">shovel</a>)</p>
+    <iframe id="microblogsFrame" src="/assets/microblogs.html" title=""></iframe>
+  </main>
+</body>
+</html>

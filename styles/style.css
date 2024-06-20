@@ -1,108 +1,218 @@
-body{
-  background-image: url(/assets/backdrop.jpg);
-  background-repeat: no-repeat;
-  background-attachment:fixed;
-  background-size: 100% 100%;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+:root {
+  --main:#1b1b1b;
+  --second:#252525;
+  --text:#d2d2d2;
+  --link:#0e5dad;
+  --linkvisited:#108998;
+  --linkhover:#131212;
+  --border:black;
 }
-
-h1{
-  /* h1 is bold by default */
-  font-size: 250%;
-  text-align: center;
-}
-main{height: fit-content;}
-main, footer p{
-  font-size: 120%;
-  background-color: #777777;
-  margin: 0% 10%;
-  padding: 10px;
-  border: solid #000000;
-  border-width: 2px;
-}
-main p{margin: 0;}
-
-table{
-  background-color: #777777;
-  padding: 10px;
-  border: solid #000000;
-  margin: 0;
+@font-face {
+  font-family: 'homestuck-font'; 
+  src: url('/assets/homestuck-font.ttf'); 
 }
 
 body{
-  margin-left: 160px;
-  padding: 0px 10px;
-}
-footer{
-  padding: 10% 0% 1%;
-  bottom: 0; 
-  font-size: small;
-  font-style: italic;
-  position: fixed
-}
-.center {
-  margin-left: auto;
-  margin-right: auto;
+  background-color:var(--main);
   text-align: center;
+  margin-left: 170px;
+  margin-bottom: 80px;
+  margin-right: 0px;
+  padding: 0px 15px;
+  font-family:"Courier New", "homestuck-font";
+  font-size: 150%;
+  font-weight: bold;
+}
+p,ul,li,h1,h2,h3,h4,h5,h6{color:var(--text);}
+
+img{
+  border: 2px solid var(--border);
+  border-radius: 10px;
+}
+.reactive{
+  width: 100%;
+  max-width: max-content;
+  height: auto;
+}
+.borderless{
+  border: unset;
+  border-radius: unset;
 }
 
-.mainNav p{
-  border: solid 2px #000000;
-  padding: 2px 3px 2px 2px;
+audio{
+  margin: 10px auto;
+}
+
+a:link{color:var(--link);}
+a:visited{color: var(--linkvisited);}
+a:hover{background-color:var(--linkhover);}
+a:hover:has(img){
+  background: none;
+  opacity: 70%;
+}
+
+ul{
+  color:var(--text);
   margin-top: 0;
-  font-size: medium;
-  background-color: #909090;
 }
-.mainNav h3{
-  margin: auto;
-  margin-bottom: 4px;
-  margin-top: 5px;
+li{
+  padding-bottom: 15px;
 }
-.mainNav{
-  height: 100%;
-  width: 120px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: grey;
-  overflow-x: hidden;
-  padding-left: 1%;
-  padding-right: 1%;
-  border-right: solid;
-  border-width: 2px;
+/* Makes lists look less nautious when paired with text-align: center; */
+ul.myUL { /* I HATE THIS THINGS NAME. TOO LAZY TO CHANGE */
+  display: inline-block;
+  text-align: left;
 }
-.mainNav ul{
+ul.noBullets{
   list-style-type: none;
   padding: 0;
-  -webkit-text-fill-color: #000000;
-  font-size: 120%;
-}
-.mainNav ul li{
-  padding: 6px 0px;
-}
-.mainNav a:hover{background-color: #777777;}
-.mainNav a:visited{-webkit-text-fill-color: #000000;}
-.mainNav img{
-  border-style: solid;
-  border-width: 2px;
 }
 
+iframe {border: none;}
 
-@media screen and (max-height: 450px) {
-  .mainNav {padding-top: 15px;}
-  .mainNav a {font-size: 18px;}
-}
-#fullpage {
-  display: none;
-  position: absolute;
-  z-index: 9999;
+
+/* Just stuff for sticky navbar */
+.mainNav{
+  height: 100%;
+  position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-size: contain;
-  background-repeat: no-repeat no-repeat;
-  background-position: center center;
-  background-color: black;
+  padding: 0 14px;
+  background-color:var(--second);
+  overflow-x: hidden;
+  /* hate having to rule the border like this */
+  border-style: solid;
+  border-width: 2px 2px 2px 0px;
+  border-radius: 0px 10px 10px;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */}
+.mainNav > *{
+  border: 2px solid var(--border); 
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  background-color: var(--main);}
+.mainNav ul{
+  list-style-type: none;
+  width: 110px;
+  padding: 0px 14px;
+  margin: inherit auto 0 auto;}
+.links li{padding-bottom: 10px; padding-top: 10px;}
+.myButton{
+  width: 120px;
+  padding: 9px;
+  padding-top: 4px;
+  padding-bottom: 6px;}
+.myButton img{
+  border: none;
+  border-radius: 0;
+  margin-top: 2px;
+  margin-left: auto;
+  margin-right: auto;}
+
+.mainNav::-webkit-scrollbar {display: none;}
+
+.followButton{
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 3px;
+}
+
+.footBorder{
+  position: fixed;
+  height: 75px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  border-top: 2px var(--border) solid;
+  border-right: 2px;
+  border-top-right-radius: 10px;
+}
+.buttonsScroller {
+  --gap: 0rem;
+  display: flex;
+  user-select: none;
+  gap: var(--gap);
+  height: 75px;	
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  background-color:var(--second);
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  margin: 0;
+  border-top-right-radius: 10px;}
+.buttonsScrollerContent{
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  gap: var(--gap);
+  animation: scroll 10s linear infinite;
+  list-style: none;
+  padding: 0;}
+.buttonsScrollerContent img{
+  width: 100px;
+  height: 35px;
+  margin: 6px;
+  border: none;
+  border-radius: 0;}
+.buttonsScroller:hover .buttonsScrollerContent {animation-play-state: paused;}
+
+@keyframes scroll {from {transform: translateX(0);}to {transform: translateX(calc(-100% - var(--gap)));}}
+
+h2:has(+p .mainFeed){
+  margin-bottom: 4px;
+}
+p:has(.mainFeed){
+  margin-top: 0px;
+}
+
+#feedButton{
+  margin-top: 0;
+  font-size: 80%;
+  background: linear-gradient(to bottom, #f89738 0%, #e4722e 100%);  color: white;
+  padding: 2px 5px 1px 3px;
+  border: 4px ridge white;
+  margin-left: auto;
+  margin-right: auto;
+}
+#feedButton:hover{
+  opacity: 70%;
+}
+
+footer{
+  bottom: 0;
+  left: 50%;
+  position: fixed;
+  width: fit-content;
+  z-index: 6;
+  transform: translate(-50%, 0);
+  white-space: nowrap;
+  margin-bottom: 5px;
+  background-color: var(--main);
+  border-radius: 10px;
+  border:2px solid var(--border);
+  visibility: visible;
+}
+footer p{
+  font-size: medium;
+  margin-top: auto;
+  padding: 1px 3px;
+  margin-bottom: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+}
+footer img{
+  vertical-align:text-bottom;
+  border: none;
+  border-radius: 0;
+  height: 16px;
+  image-rendering: pixelated;
+  padding-bottom: 2px;
 }

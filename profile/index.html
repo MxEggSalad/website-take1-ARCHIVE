@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>Profile</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <meta name="author" content="mxeggsalad">
+  <!--OG-->
+  <meta name="og:title" content="mxeggsalad's Profile">
+  <meta name="og:description" content="AHH AHH AHH MY ADDRESS NOO. Personal PROFILE WHAT DO YOU THINK IT'D BE">
+  <meta name="og:image" content="https://mxeggsalad.nekoweb.org/assets/images/crustyinfantscreamingforhelp.jpg">
+  <meta name="og:url" content="https://mxeggsalad.nekoweb.org/profile/">
+  <meta name="og:type" content="website">
+  <!--Twitter-->
+  <meta name="twitter:title" content="mxeggsalad's Profile">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@mxeggsalad">
+  <meta name="twitter:image" content="https://mxeggsalad.nekoweb.org/assets/images/crustyinfantscreamingforhelp.jpg">
+  <script>
+    fetch("/assets/buttons.html")
+      .then((response) => {
+        return response.text();
+      })
+      .then((data) => {
+        document.getElementById("buttons").innerHTML = data;
+      });
+    fetch('https://api.github.com/repos/MxEggSalad/mxeggsalad-nekoweb/commits?per_page=1')
+    .then(res => res.json())
+    .then(res => {
+    document.getElementById('message').innerHTML = res[0].commit.message
+    trunkatedText = res[0].commit.tree.sha
+    trunkatedText = trunkatedText.substring(0, 8)
+    console.log(trunkatedText)
+    document.getElementById('sha').innerHTML = trunkatedText
+    })
+  </script>
+  <style>
+    .mainboxFlex{
+      display: flex;
+      background-color: var(--second);
+      padding: 20px 25px 20px 25px;
+      margin-left: auto;
+      margin-right: auto;
+      height: fit-content;
+      max-width: 600px;
+      text-align: left;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+    }
+    .leftContent img{
+      max-width: 230px;
+    }
+    .leftContent{
+      margin-right: 5px;
+    }
+    .leftContent .container, .rightContent .container{
+      background-color: var(--main);
+      height: fit-content;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+    }
+    .leftContent .container ul{
+      margin-bottom: 0;
+    }
+    .leftContent .container li{
+      font-size: 65%;
+      margin-left: 10px;
+    }
+    .leftContent .container h2,.rightContent .container h2{
+      width: fit-content;
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 80%;
+    }
+    .rightContent{
+      margin-left: 5px;
+    }
+    .rightContent p{
+      margin-left: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 70%;
+    }
+    </style>
+</head>
+
+<body>
+  <header>
+    <h1>Alright, who's this dumbass<br></h1>
+  </header>
+
+  <!--Navbar + follow button bcs im lazy-->
+  <div class="container">
+    <iframe class="followButton" src="https://nekoweb.org/frame/follow" width="150" height="40" title=""></iframe>
+    <div class="mainNav">
+      <img class="logo" src="/assets/images/crustyinfantscreamingforhelp.jpg" alt="" width="138px" height="138px">
+      <ul class="links">
+        <li><a href="/home/" title="Main page of the website">Home</a></li>
+        <li><a href="/profile/" title="All of my,,, personal DOX!!! Find out about me here >;3">Profile</a></li>
+        <li><a href="/blogs/" title="Long articles, usually informative or based on my interests">Blogs</a></li>
+        <li><a href="/microblogs" title="Blogs, but but but but REALLY small"><i>micro</i> Blogs</a></li>
+        <li><a href="/music/" title="Self explanatory">Music I Like</a></li>
+        <li><a href="/about/" title="Outlines some information about this website and my contact information">About</a></li>
+        <li><a href="https://mxeggsalad.atabook.org/" title="(Offsite)">Atabook</a></li>
+      </ul>
+
+      <div class="myButton">
+        <div>
+          <a href="/assets/buttons/mxeggsalad.nekoweb.org.gif" target="_blank">My Button
+          <img src="/assets/buttons/mxeggsalad.nekoweb.org.gif" alt="" height="35" width="100"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh-->
+
+  <main>
+    <div class="mainboxFlex">
+      <div class="leftContent">
+        <img src="./assets/profileImage.png" alt="Profile picture of a doggirl, Jade Harley, giving you the middle finger on ">
+
+        <div class="container">
+          <h2>Quickfax!</h2>
+          <ul class="noBullets">
+            <li>Age: Older than you!</li>
+            <li>Gender: Transfem <img class="borderless" src="./assets/transflag.png" height="10px" alt="transgender pride flag"></li>
+            <li>Country: Australia</li>
+            <li>Zodiac: Virgo</li>
+            <li>OS: Fedora 40 (btw)</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="rightContent">
+        <div class="container">
+          <h2>Mxeggsalad</h2>
+          <p>Hiiii!!</p>
+
+          <p>Where to begin uhh, hii, my name is mxeggsalad,</p>
+
+          <p>I'm some little nerd based in australia who Really Needs to
+          Get Out More(TM).
+          </p>
+
+          <p>I won't share too much since I'm quite paranoid about internet
+          security, but as of now I'm studying at XXXX for IT certification :D
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="buttons"></div>
+</body>
+</html>

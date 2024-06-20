@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <meta name="author" content="mxeggsalad">
+  <!--OG-->
+  <meta name="og:title" content="mxeggsalad's Homepage">
+  <meta name="og:description" content="A speradic display of my autistic tendencies and interests. Expect nonsense!!">
+  <meta name="og:image" content="https://mxeggsalad.nekoweb.org/assets/images/crustyinfantscreamingforhelp.jpg">
+  <meta name="og:url" content="https://mxeggsalad.nekoweb.org/home/">
+  <meta name="og:type" content="website">
+  <!--Twitter-->
+  <meta name="twitter:title" content="mxeggsalad's Home">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@mxeggsalad">
+  <meta name="twitter:image" content="https://mxeggsalad.nekoweb.org/assets/images/crustyinfantscreamingforhelp.jpg">
+  <script>
+    fetch("/assets/buttons.html")
+      .then((response) => {
+        return response.text();
+      })
+      .then((data) => {
+        document.getElementById("buttons").innerHTML = data;
+      });
+    fetch('https://api.github.com/repos/MxEggSalad/mxeggsalad-nekoweb/commits?per_page=1')
+    .then(res => res.json())
+    .then(res => {
+    document.getElementById('message').innerHTML = res[0].commit.message
+    trunkatedText = res[0].commit.tree.sha
+    trunkatedText = trunkatedText.substring(0, 8)
+    console.log(trunkatedText)
+    document.getElementById('sha').innerHTML = trunkatedText
+    })
+  </script>
+  <style>
+    :root {
+      --main:#1b1b1b;
+      --second:#252525;
+      --text:#d2d2d2;
+      --link:#0e5dad;
+      --linkvisited:#108998;
+      --linkhover:#131212;
+      --border:black;}
+    .latestCommit{
+      display: block;
+      padding: 10px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 474px;
+      background-color:var(--second);
+      text-decoration: none;
+      border: 2px solid var(--border);
+      border-radius: 10px;}
+    .latestCommit p{
+      margin-top: 2px;
+      margin-bottom: 6px;}
+    .link{      
+      text-decoration: underline;}
+    #sha{
+      margin-top: 10px;
+      margin-bottom: 4px;
+      color: var(--text);
+      font-size: large;
+      font-family: monospace}
+    #message{
+      margin-top: 0;
+      color: var(--text);
+      font-size: large;
+      font-family: monospace}
+    .latestCommit:hover{
+      background-color:var(--second);
+      opacity: 70%;}
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>This is a Heading<br></h1>
+  </header>
+
+  <!--Navbar + follow button bcs im lazy-->
+  <div class="container">
+    <iframe class="followButton" src="https://nekoweb.org/frame/follow" width="150" height="40" title=""></iframe>
+    <div class="mainNav">
+      <img class="logo" src="/assets/images/crustyinfantscreamingforhelp.jpg" alt="" width="138px" height="138px">
+      <ul class="links">
+        <li><a href="/home/" title="Main page of the website">Home</a></li>
+        <li><a href="/profile/" title="All of my,,, personal DOX!!! Find out about me here >;3">Profile</a></li>
+        <li><a href="/blogs/" title="Long articles, usually informative or based on my interests">Blogs</a></li>
+        <li><a href="/microblogs" title="Blogs, but but but but REALLY small"><i>micro</i> Blogs</a></li>
+        <li><a href="/music/" title="Self explanatory">Music I Like</a></li>
+        <li><a href="/about/" title="Outlines some information about this website and my contact information">About</a></li>
+        <li><a href="https://mxeggsalad.atabook.org/" title="(Offsite)">Atabook</a></li>
+      </ul>
+
+      <div class="myButton">
+        <div>
+          <a href="/assets/buttons/mxeggsalad.nekoweb.org.gif" target="_blank">My Button
+          <img src="/assets/buttons/mxeggsalad.nekoweb.org.gif" alt="" height="35" width="100"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ahhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh-->
+
+  <main>
+    <p>This is a paragraph.</p>
+    <img src="./assets/crustyinfantscreamingforhelp.jpg" height="125" width="125" alt="screaming baby covered in ash. arms raised and mouth agape.">
+    <p>This is a crusty, screaming baby.</p>
+    <audio controls>
+      <source src="./assets/halflife2-stalker-scream-sound-effect.mp3"
+        type="audio/ogg">
+      <source src="./assets/halflife2-stalker-scream-sound-effect.ogg"
+        type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <h2>Crusty screaming babies are:</h2>
+    <ul class="noBullets">
+      <li>Cute</li>
+      <li>Tasty</li>
+      <li>Crusty</li>
+      <li>Screaming</li>
+      <li>Probably babies</li>
+    </ul>
+    <a href="https://github.com/MxEggSalad/mxeggsalad-nekoweb/" class="latestCommit">
+    <div>
+      <p class="link">Latest Commit</p>
+      <p id="sha"></p>
+      <p id="message">Loading/Rate limit</p>
+    </div>
+    </a>
+
+    <a href="/blogs/main/screamingbabies/"> woah what the fuck is this </a>
+    <p>I intend to do a LOT more with this website but uhhhh, for the time being that i dont know css nor much html,
+      this will have to do<br>I cant promise much activity but attempts will be made!!!<br>Time being tho this is
+      just testing</p>
+    <h2>Oh yeah also look ay my friend North's really cool art!!!!!!</h2>
+    <a href="https://www.instagram.com/nommingwaffles/">
+      <img src="./assets/cat!!.jpg" class="reactive" height="500" width="500" alt="A digital drawing of a white cat yawning"></a>
+    <a href="https://www.instagram.com/nommingwaffles/">
+      <img src="./assets/north-madoka.jpg" class="reactive" height="500" width="500" alt="Painting of Madoka pulling back a bow"></a>
+  </main>
+  <div id="buttons"></div>
+</body>
+</html>

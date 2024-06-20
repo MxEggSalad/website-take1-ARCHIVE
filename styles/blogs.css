@@ -1,0 +1,89 @@
+:root {
+  --main:#1b1b1b;
+  --second:#252525;
+  --text:#d2d2d2;
+  --link:#0e5dad;
+  --linkvisited:#108998;
+  --linkhover:#131212;
+  --border:black;
+}
+@font-face {
+  font-family: 'homestuck-font'; 
+  src: url('/assets/homestuck-font.ttf'); 
+}
+
+body{
+  background-color:var(--main);
+  font-family: "Courier New", "homestuck-font";
+}
+
+main{
+  display: block;
+  padding: 15px;
+  margin: 10px 13% 30px 13%;
+  background-color:var(--second);
+  border: 3px solid var(--border);
+  border-radius: 5px;
+}
+
+p,h1,h2,h3,h4,ul,li{
+  color: var(--text);
+  font-size: 150%;
+  font-weight: bold;
+}
+h1,h2,h3,h4,h5,h6{
+  font-size: 190%;
+  font-weight: bolder;
+  background-color:var(--main);
+  color: var(--text);
+  border: inherit;
+  border-radius: inherit;
+  padding: 10px;
+  margin: 0;
+}
+
+p{
+  margin-left: 30px;
+  margin-right: 30px;
+  line-height: 1.2;
+}
+
+img{
+  margin: 40px ;
+}
+p > img{
+  margin-top: 5px;
+}
+p:has(img){
+  background-color: var(--main);
+  padding: 10px;
+  border: inherit;
+  border-radius: inherit;
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  max-width: max-content;
+}
+
+strong{
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: var(--main);
+  padding: 1px 2px 1px 2px;
+}
+
+a:link{-webkit-text-fill-color:var(--link);}
+a:visited{-webkit-text-fill-color:var(--linkvisited);}
+a:hover{background-color:var(--linkhover);}
+a:hover:has(img){
+  background: none;
+  opacity: 70%;
+}
+
+iframe {border: none;}
